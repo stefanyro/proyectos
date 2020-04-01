@@ -1,0 +1,21 @@
+<div class="container">
+    <center><h3>Periodo academico</h3></center>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>Id</h5>
+        </div>
+        <div class="col-sm-6">
+            <h5>periodo</h5>
+        </div>
+    </div>
+    {{#each user}}
+    <div class="row">
+        <div class="col-sm-6">
+            {{id_periodo}}
+        </div>
+        <div class="col-sm-6">
+            {{periodo}}
+        </div>
+    </div>
+    {{/each}}
+</div>

@@ -1,0 +1,53 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-bady">
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <label for="">Registrar</label>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="usuario" placeholder="usuario">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="password" name="contrasena" placeholder="contraseña">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success btn-block">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="div-md-8">
+            <div class="card-body">
+                <h3>Usuarios</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">nombre</th>
+                            <th scope="col">apellido</th>
+                            <th scope="col">usuario</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each user}}
+                        <tr>
+                            <th scope="row">{{id_usuarios}}</th>
+                            <td>{{nombre}}</td>
+                            <td>{{apellido}}</td>
+                            <td>{{user}}</td>
+                            <td><a href="delete/{{id_usuarios}}" class="btn btn-danger">Eliminar</a></td>
+                            <td><a href="" class="btn btn-info">Modificar</a></td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

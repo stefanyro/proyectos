@@ -1,0 +1,21 @@
+<div class="container">
+    <center><h3>Lista de materias</h3></center>
+    <div class="row">
+        <div class="col-sm-6">
+            <h5>Id</h5>
+        </div>
+        <div class="col-sm-6">
+            <h5>Materia</h5>
+        </div>
+    </div>
+    {{#each user}}
+    <div class="row">
+        <div class="col-sm-6">
+            {{id_materia}}
+        </div>
+        <div class="col-sm-6">
+            {{materia}}
+        </div>
+    </div>
+    {{/each}}
+</div>

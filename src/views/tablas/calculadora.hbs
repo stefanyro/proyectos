@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <center>
+        <h2>Calculadora</h2>
+    </center>
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" id="txtN1" placeholder="Primer numero">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" id="txtN2" placeholder="Segundo numero">
+                </div>
+            </div>
+        </form>
+    </div>
+    <br>
+    <div>
+        <center>
+            <input type="button" onclick="suma();" class="btn btn-secondary" value="+">
+            <input type="button" onclick="res();" class="btn btn-secondary" value="-">
+            <input type="button" onclick="mult();" class="btn btn-secondary" value="x">
+            <input type="button" onclick="div();" class="btn btn-secondary" value="÷">
+        </center>
+    </div>
+    <br>
+    <center><a href="/tablas/tercera" class="btn btn-info mb-2">enviar</a></center>
+</body>
+<script>
+
+    function suma() {
+        var tablai = document.getElementById('txtN1').value;
+        var tablaf = document.getElementById('txtN2').value;
+
+        tablaf = parseInt(tablaf)
+        tablai = parseInt(tablai)
+        suma = tablai + tablaf;
+        document.write(suma)
+
+    }
+    function res() {
+        var tablai = document.getElementById('txtN1').value;
+        var tablaf = document.getElementById('txtN2').value;
+        tablaf = parseInt(tablaf)
+        tablai = parseInt(tablai)
+        r = tablai - tablaf;
+        document.write(r)
+
+    }
+    function mult() {
+        var tablai = document.getElementById('txtN1').value;
+        var tablaf = document.getElementById('txtN2').value;
+        tablaf = parseInt(tablaf)
+        tablai = parseInt(tablai)
+        m = tablai * tablaf;
+        document.write(m)
+
+    }
+    function div() {
+        var tablai = document.getElementById('txtN1').value;
+        var tablaf = document.getElementById('txtN2').value;
+        tablaf = parseInt(tablaf)
+        tablai = parseInt(tablai)
+        d = tablai / tablaf;
+        document.write(d)
+
+    }
+</script>
+
+</html>

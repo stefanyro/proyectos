@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h2>Factorial</h2>
+    <form class="form-inline">
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="inputPassword2" class="sr-only"></label>
+            <input class="form-control" id="txtN1" placeholder="Digite un numero">
+        </div>
+        <button type="submit" onclick="Generar();" class="btn btn-warning mb-2">Resultado</button>
+        <center><a href="/tablas/calculadora" class="btn btn-secondary mb-2">enviar</a></center>
+    </form>
+</body>
+<script>
+    function Generar() {
+        var n1 = document.getElementById('txtN1').value;
+
+        for (var i = 0; i <= n1; i++) {
+            document.write(i + "*");
+        }
+    }
+</script>
+
+</html>

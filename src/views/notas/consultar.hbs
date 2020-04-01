@@ -1,0 +1,39 @@
+<div class="container">
+    <center><h3>Listado de notas</h3></center>
+    <div class="row"> 
+        <div class="col-sm-2">
+            <h5>Id</h5>
+        </div>
+        <div class="col-sm-2">
+            <h5>id docente</h5>
+        </div>
+        <div class="col-sm-2">
+            <h5>id materia</h5>
+        </div>
+        <div class="col-sm-2">
+            <h5>id periodo</h5>
+        </div>
+        <div class="col-sm-2">
+            <h5>Nota</h5>
+        </div>
+    </div>
+    {{#each user}}
+    <div class="row">
+        <div class="col-sm-2"> 
+            {{id_nota}}
+        </div>
+        <div class="col-sm-2"> 
+            {{id_docente}}
+        </div>
+        <div class="col-sm-2"> 
+            {{id_materia}}
+        </div>
+        <div class="col-sm-2"> 
+            {{id_periodo}}
+        </div>
+        <div class="col-sm-2"> 
+            {{nota}}
+        </div>
+    </div>
+    {{/each}}
+</div>

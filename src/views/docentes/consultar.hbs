@@ -1,0 +1,33 @@
+<div class="container">
+    <center><h3>Lista de docentes</h3></center>
+    <div class="row">
+        <div class="col-sm-3">
+            <h5>Id</h5>
+        </div>
+        <div class="col-sm-3">
+            <h5>Nombre</h5>
+        </div>
+        <div class="col-sm-3">
+            <h5>Edad</h5>
+        </div>
+        <div class="col-sm-3">
+            <h5>Email</h5>
+        </div>
+    </div>
+    {{#each user}}
+    <div class="row">
+        <div class="col-sm-3">
+            {{id_docente}}
+        </div>
+         <div class="col-sm-3">
+            {{nombre}}
+        </div>
+         <div class="col-sm-3">
+            {{edad}}
+        </div>
+         <div class="col-sm-3">
+            {{correo}}
+        </div>
+    </div>
+</div>
+{{/each}}

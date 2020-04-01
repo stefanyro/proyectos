@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Tablas de multiplicar</legend>
+        <label for="">tabla inicial</label>
+        <input type="text" id="txtN1">
+        <label for="">tabla final</label>
+        <input type="text" id="txtN2">
+        <label for="">hasta donde</label>
+        <input type="text" id="txtN3">
+        <label for="">salto</label>
+        <input type="text" id="txtN4">
+        <br><br>
+        <input type="button" onclick="Generar();" class="btn btn-info" value="Enviar">
+    </fieldset>
+
+</body>
+<script>
+    function Generar() {
+        var tablai = document.getElementById('txtN1').value;
+        var tablaf = document.getElementById('txtN2').value;
+        var tabla = document.getElementById('txtN3').value;
+        var salto = document.getElementById('txtN4').value;
+
+        
+
+        for (var i = tablai; i <= tablaf; i++) {
+            document.write("--------------")
+            for (var j = 1; j <= tabla; j++) {
+                document.write("<br>" + i + "x" + j + "=" + (i * j));
+                document.write("<div>")
+            }
+        }
+    }
+</script>
+
+</html>
