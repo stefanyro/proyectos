@@ -42,7 +42,7 @@ app.use('/periodo',require('./routes/periodo_academico'));
 app.use('/asigna',require('./routes/asigna_materia'));
 
 //Public
-app.unsubscribe(express.static (path.join(__dirname, 'public')));
+app.use(express.static (path.join(__dirname, 'public')));
 
 //Inicia el server 
 app.listen(app.get('port'),() =>{
