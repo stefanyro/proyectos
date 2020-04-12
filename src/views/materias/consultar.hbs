@@ -3,51 +3,52 @@
         <h3>Lista de materias</h3>
     </center>
     <div class="row">
-        <a href="/materias/agregar" class="btn btn-success">Registrar</a>
+        <center><a href="/materias/agregar" class="btn btn-success">Registrar</a></center>
     </div>
-    <div class="row row-cols-4">
-        <div class="col">
+    <div class="row">
+        <div class="col-sm-3">
             <h5>Id</h5>
         </div>
-        <div class="col">
+        <div class="col-sm-3">
             <h5>Materia</h5>
         </div>
-        <div class="col">
+        <div class="col-sm-3">
             <h5>Accion</h5>
         </div>
-        <div class="col">
+        <div class="col-sm-3">
             <h5>Accion</h5>
         </div>
-        {{#each ConsultaMateria}}
-        <div class="col"> {{id_materia}}</div>
-        <div class="col"> {{materia}}</div>
-        <div class="col">
-            <!-- Button trigger modal Modificar-->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalModificar">
-                Modificar
-            </button>
-        </div>
-        <div class="col">
-            <!-- Button trigger modal Eliminar -->
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalEliminar">
-                Eliminar
-            </button>
-        </div>
-        {{/each}}
     </div>
-    <!-- Modal Modificar -->
-    <div class="modal fade" id="modalModificar" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+    {{#each ConsultaMateria}}
+    <div class="row">
+        <div class="col-sm-3">
+            {{id_materia}}
+        </div>
+        <div class="col-sm-3">
+            {{materia}}
+        </div>
+        <div class="col-sm-3">
+            <!-- Button trigger modal -->
+            <button class="btn btn-outline-primary" data-toggle="modal" data-target="#modalModificar{{id_materia}}">Modificar</button>
+        </div>
+        <div class="col-sm-3">
+            <!-- Button trigger modal -->
+            <button class="btn btn-outline-danger" data-toggle="modal" data-target="#modalEliminar{{id_materia}}">Eliminar</button>
+        </div>
+    </div>
+    <!-- Modal Modificar-->
+    <div class="modal fade" id="modalModificar{{id_materia}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Confirmar modificación</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Confirmar modificación</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                     ¿Esta seguro que desea modificar la materia?
+                    ¿Esta seguro que desea modificar la materia?
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -57,12 +58,12 @@
         </div>
     </div>
     <!-- Modal Eliminar-->
-    <div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal fade" id="modalEliminar{{id_materia}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Confirmar eliminación</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Confirmar eliminación</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -72,9 +73,10 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-danger">Eliminar</button>
+                    <a href="delete/{{id_materia}}" class="btn btn-danger">Eliminar</a>
                 </div>
             </div>
         </div>
     </div>
+    {{/each}}
 </div>

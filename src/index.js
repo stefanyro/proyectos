@@ -49,5 +49,4 @@ app.listen(app.get('port'),() =>{
     console.log('serve on port', app.get('port'));
 }); 
 
-//imagenes
-app.use(express.static('public'));
+
