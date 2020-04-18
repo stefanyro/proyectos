@@ -1,31 +1,25 @@
 <div class="container">
     <center><h3>Asignacion de materias</h3></center>
     <div class="row">
-        <div class="col-sm-3">
-            <h5>id</h5>
+         <div class="col-sm-4">
+            <h5>docente</h5>
         </div>
-         <div class="col-sm-3">
-            <h5>id docente</h5>
+         <div class="col-sm-4">
+            <h5>materia</h5>
         </div>
-         <div class="col-sm-3">
-            <h5>id materia</h5>
+         <div class="col-sm-4">
+            <h5>periodo</h5>
         </div>
-         <div class="col-sm-3">
-            <h5>id periodo</h5>
-        </div>
-        {{#each user}}
+        {{#each AsignarMateria}}
         <div class="row">
-            <div class="col-sm-3">
-                {{id_amd}}
+             <div class="col-sm-4">
+                {{nombre}}
             </div>
-             <div class="col-sm-3">
-                {{id_docente}}
+             <div class="col-sm-4">
+                {{materia}}
             </div>
-             <div class="col-sm-3">
-                {{id_materia}}
-            </div>
-             <div class="col-sm-3">
-                {{id_periodo}}
+             <div class="col-sm-4">
+                {{periodo}}
             </div>
         </div>
         {{/each}}

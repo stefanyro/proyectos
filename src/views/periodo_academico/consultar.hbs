@@ -1,23 +1,83 @@
 <div class="container">
-    <center><h3>Periodo academico</h3></center>
+    <center>
+        <h3>Periodo academico</h3>
+    </center>
     <div class="row">
         <a href="/periodo/agregar" class="btn btn-success">Registrar</a>
     </div>
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-3">
             <h5>Id</h5>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-3">
             <h5>periodo</h5>
+        </div>
+        <div class="col-sm-3">
+            <h5>Accion</h5>
+        </div>
+        <div class="col-sm-3">
+            <h5>Accion</h5>
         </div>
     </div>
     {{#each user}}
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-3">
             {{id_periodo}}
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-3">
             {{periodo}}
+        </div>
+        <div class="col-sm-3">
+            <!-- Button trigger modal -->
+            <button class="btn btn-outline-primary" data-toggle="modal"
+                data-target="#modalModificar{{id_periodo}}">Modificar</button>
+        </div>
+        <div class="col-sm-3">
+            <!-- Button trigger modal -->
+            <button class="btn btn-outline-danger" data-toggle="modal"
+                data-target="#modalEliminar{{id_periodo}}">Eliminar</button>
+        </div>
+    </div>
+    <!-- Modal Modificar-->
+    <div class="modal fade" id="modalModificar{{id_periodo}}" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Confirmar modificación</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ¿Esta seguro que desea modificar?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <a href="update/{{id_periodo}}" class="btn btn-primary">Modificar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Eliminar-->
+    <div class="modal fade" id="modalEliminar{{id_periodo}}" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Confirmar eliminación</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ¿Esta seguro que desea eliminar?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <a href="delete/{{id_periodo}}" class="btn btn-danger">Eliminar</a>
+                </div>
+            </div>
         </div>
     </div>
     {{/each}}

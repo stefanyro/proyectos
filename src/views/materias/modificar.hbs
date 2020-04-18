@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="col-md-4 col-sm-4 col-xs-4" style="text-align: center; margin-left:400px; margin-top:100px">
+        {{#each ModificaMateria}}
+        <form action="" method="post">
+            <h4>Modificar materias</h4>
+            <div class="form-group">
+                <input class="form-control" type="hidden" name="id_estudiante" value="{{id_materia}}">
+            </div>
+            <div class="form-group">
+                <label for="materia"></label>
+                <input type="text" name="materia" class="form-control" id="materia" value="{{materia}}">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Modificar</button>
+        </form>
+        {{/each}}
+    </div>
+</div>

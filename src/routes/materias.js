@@ -23,4 +23,17 @@ router.get('delete/:id_materia',async(req,res) => {
     const EliminaMateria = await pool.query('delete from materias where id_materia=?',[id_materia]);
     res.redirect('/materias/consultar');
 });
+
+router.get('/update/:id_materia', async(req, res)=>{
+    const {id_materia} = req.params;
+    const ModificaMateria = await pool.query('select * from materias where id_materia=?',[id_materia]);
+    res.render('materias/modificar',{ModificaMateria});
+});
+
+router.post('/update/:id_materia', async(req, res)=>{
+    const {id_materia} = req.params;
+    const {materia} = req.body;
+    await pool.query("UPDATE materias set materia='" + [materia] + "' WHERE id_materia='" + [id_materia] + "'");
+    res.redirect('/materias/consultar');
+});
 module.exports=router;

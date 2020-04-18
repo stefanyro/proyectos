@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="col-md-4 col-sm-4 col-xs-4" style="text-align: center; margin-left:400px; margin-top:100px">
+        {{#each ModificaDocente}}
+        <form action="" method="post">
+            <h4>Modificar docentes</h4>
+             <div class="form-group">
+                <input class="form-control" type="hidden" name="id_estudiante" value="{{id_docente}}">
+            </div>
+            <div class="form-group">
+                <label for="nombre"></label>
+                <input type="text" name="nombre" class="form-control" id="nombre" value="{{nombre}}">
+            </div>
+            <div class="form-group">
+                <label for="edad"></label>
+                <input type="number" name="edad" class="form-control" id="edad" value="{{edad}}">
+            </div>
+            <div class="form-group">
+                <label for="Email"></label>
+                <input type="email" name="correo" class="form-control" id="Email" value="{{correo}}">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Modificar</button>
+        </form>
+        {{/each}}
+    </div>
+</div>

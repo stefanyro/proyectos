@@ -5,9 +5,6 @@
     </div>
     <div class="row"> 
         <div class="col-sm-2">
-            <h5>Id</h5>
-        </div>
-        <div class="col-sm-2">
             <h5>Docente</h5>
         </div>
         <div class="col-sm-2">
@@ -23,22 +20,19 @@
             <h5>Nota</h5>
         </div>
     </div>
-    {{#each user}}
+    {{#each consultaNota}}
     <div class="row">
         <div class="col-sm-2"> 
-            {{id_nota}}
+            {{nombre}}
         </div>
         <div class="col-sm-2"> 
-            {{id_docente}}
+            {{nombre}}
         </div>
         <div class="col-sm-2"> 
-            {{id_estudiante}}
+            {{materia}}
         </div>
         <div class="col-sm-2"> 
-            {{id_materia}}
-        </div>
-        <div class="col-sm-2"> 
-            {{id_periodo}}
+            {{periodo}}
         </div>
         <div class="col-sm-2"> 
             {{nota}}
